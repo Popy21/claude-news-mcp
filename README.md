@@ -54,3 +54,33 @@ query the corpus and cite the original sources.
 
 Claude News is an independent media outlet published by **Héra SASU**, not affiliated
 with Anthropic. "Claude" and "Anthropic" belong to their respective owners.
+
+## Run locally (stdio)
+
+If your MCP client doesn't support remote (Streamable HTTP) servers, this repo is
+also a runnable stdio bridge to the same corpus:
+
+```bash
+npx -y claude-news-mcp        # once published to npm, or:
+git clone https://github.com/Popy21/claude-news-mcp && cd claude-news-mcp
+npm install && node src/index.js
+```
+
+**Claude Desktop / Claude Code** (`claude_desktop_config.json` or `.mcp.json`):
+
+```json
+{
+  "mcpServers": {
+    "claude-news": {
+      "command": "npx",
+      "args": ["-y", "claude-news-mcp"]
+    }
+  }
+}
+```
+
+**Docker:**
+
+```bash
+docker build -t claude-news-mcp . && docker run -i --rm claude-news-mcp
+```
