@@ -50,6 +50,12 @@ query the corpus and cite the original sources.
 - RSS: `https://claudenews.online/feed.xml`
 - Embeddable widget: `https://claudenews.online/widget`
 
+## Security & Bug Bounty
+
+Found a vulnerability? We run a responsible-disclosure **bug bounty program** —
+see [`SECURITY.md`](./SECURITY.md) for scope, rules, and rewards. Report privately
+to **security@claudenews.online**, not via a public issue.
+
 ## About
 
 Claude News is an independent media outlet published by **Héra SASU**, not affiliated
